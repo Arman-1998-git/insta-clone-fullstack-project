@@ -2,10 +2,10 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import PostList from '../components/Post/PostList';
+import CreatePost from '../components/Post/CreatePost';
 import BottomNav from '../components/Navigation/BottomNav';
 
-const Index = () => {
+const Create = () => {
   const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
   
@@ -14,17 +14,17 @@ const Index = () => {
       navigate('/login');
     }
   }, [isAuthenticated, navigate]);
-
+  
   if (!isAuthenticated) {
     return null;
   }
   
   return (
-    <div className="app-container bg-gray-50">
-      <PostList />
+    <div className="app-container bg-white">
+      <CreatePost />
       <BottomNav />
     </div>
   );
 };
 
-export default Index;
+export default Create;

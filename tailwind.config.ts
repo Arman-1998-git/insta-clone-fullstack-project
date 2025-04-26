@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				instagram: {
+					blue: "#0095f6",
+					red: "#ed4956",
+					purple: "#8a3ab9",
+					pink: "#bc2a8d",
+					orange: "#fccc63",
+					gray: "#dbdbdb",
+					darkGray: "#8e8e8e",
+					black: "#262626"
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
+			},
+			backgroundImage: {
+				'instagram-gradient': 'linear-gradient(45deg, #8a3ab9, #bc2a8d, #fccc63)',
 			}
 		}
 	},
